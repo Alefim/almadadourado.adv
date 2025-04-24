@@ -2,12 +2,13 @@
 // “Hello, World!” Example: https://learn-code.wix.com/en/article/hello-world
 
 $w.onReady(function () {
-    // Código básico Velo no Wix
-$w.onReady(function () {
-    // Animações simples ao carregar a página
-    $w("#heroSection").show("fade", { duration: 800 });
-    $w("#logoImage").show("fade", { duration: 1200 });
-    $w("#titleText").show("fade", { duration: 1400 });
+    // Mostra o slideshow com efeito ao carregar a página
+    $w("#slideshow1").show("fade", { duration: 1000 });
+
+    // Muda automaticamente de slide a cada 5 segundos
+    setInterval(() => {
+        $w("#slideshow1").next();
+    }, 5000);
 });
 
-});
+
